@@ -7,12 +7,14 @@ class StackSingleLinkedList:
     def __init__(self):
         self.top=None
     
+    # O(1) - Linear Time Complexity
     def push(self, value):
         new_node=Node(value)
         new_node.next=self.top
         self.top=new_node
         print('Pushed => ', value)
 
+    # O(1) - Linear Time Complexity
     def pop(self):
         if self.top is None:
             print('Stack Underflow!')
@@ -21,12 +23,14 @@ class StackSingleLinkedList:
             self.top=self.top.next
             print('Popped => ',pop_ele)
 
+    # O(1) - Linear Time Complexity
     def peek(self):
         if self.top is None:
             print('Stack Empty!')
         else:
             print('Peek element ',self.top.value)
     
+    # O(n) - Time Complexity
     def print_stack(self):
         if self.top is None:
             print('Stack Empty!')
